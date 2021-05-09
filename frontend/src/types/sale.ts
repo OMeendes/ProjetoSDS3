@@ -1,6 +1,6 @@
 import { Seller } from "./seller"
 
-export type Sale ={
+export type Sale = {
     id: number;
     visited: number;
     deals: number;
@@ -22,7 +22,7 @@ export type SalePage = {
 }
 
 export type SaleSum = {
-    sellerName: string; 
+    sellerName: string;
     sum: number;
 }
 

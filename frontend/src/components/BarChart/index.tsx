@@ -11,7 +11,7 @@ type SeriesData = {
 }
 
 type ChartData = {
-    labels:{
+    labels: {
         categories: string[];
     };
     series: SeriesData[];
@@ -19,13 +19,13 @@ type ChartData = {
 
 const BarChart = () => {
 
-    const[chartData, setChartData] = useState<ChartData>({
+    const [chartData, setChartData] = useState<ChartData>({
         labels: {
             categories: []
         },
         series: [{
             name: "",
-            data:[]
+            data: []
         }]
 
 
@@ -33,7 +33,7 @@ const BarChart = () => {
     });
 
     useEffect(() => {
-        
+
         axios.get(`${BASE_URL}/sales/success-by-seller`)
             .then(response => {
                 const data = response.data as SaleSuccess[];
@@ -42,12 +42,12 @@ const BarChart = () => {
 
                 setChartData({
                     labels: {
-                        categories:myLabels
+                        categories: myLabels
                     },
-                    series:[
+                    series: [
                         {
                             name: "% Success",
-                            data:mySeries
+                            data: mySeries
                         }
                     ]
                 });
