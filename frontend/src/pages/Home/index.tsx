@@ -19,13 +19,14 @@ const Home = () => {
                     <Link className="btn- btn-primary btn-lg" to="/dashboard">
                         Acessar o DashBoard
              </Link>
+
                 </div>
-
             </div>
-
-
-
             <Footer />
+
+
+
+
         </>
 
     );
